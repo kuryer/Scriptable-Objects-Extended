@@ -16,8 +16,8 @@ public abstract class VariableEventListener<T> : MonoBehaviour
         varEvent.Unsubscribe(this);
     }
 
-    public void Raise()
+    public void Raise(T value)
     {
-        response.Invoke(varEvent.Variable);
+        response.Invoke(value);
     }
 }

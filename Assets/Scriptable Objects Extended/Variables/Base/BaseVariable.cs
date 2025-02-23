@@ -6,7 +6,7 @@ public abstract class BaseVariable<T> : ScriptableObject
 
     [SerializeField] T DefaultValue;
 
-    public void SetToDefault()
+    public virtual void SetToDefault()
     {
         Variable = DefaultValue;
     }

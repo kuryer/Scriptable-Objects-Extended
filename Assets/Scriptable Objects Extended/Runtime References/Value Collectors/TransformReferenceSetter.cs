@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class TransformCollector : MonoBehaviour
+public class TransformReferenceSetter : MonoBehaviour
 {
-    [SerializeField] TransformValue reference;
+    [SerializeField] TransformReference reference;
 
     private void Awake()
     {

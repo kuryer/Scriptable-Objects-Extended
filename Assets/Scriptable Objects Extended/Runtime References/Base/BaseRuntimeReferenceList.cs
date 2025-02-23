@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseRuntimeList<T> : ScriptableObject
+public abstract class BaseRuntimeReferenceList<T> : ScriptableObject
 {
     public List<T> List;
 
@@ -18,6 +18,6 @@ public abstract class BaseRuntimeList<T> : ScriptableObject
 
     public void ResetList()
     {
-        List = new List<T>();
+        List.Clear();
     }
 }

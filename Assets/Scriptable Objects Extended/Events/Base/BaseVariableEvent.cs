@@ -3,13 +3,20 @@ using UnityEngine;
 
 public abstract class BaseVariableEvent<T> : ScriptableObject
 {
-    protected T variable;
-    public T Variable { get { return variable; } }
+    [SerializeField] private T defaultVariable; 
+    private T variable;
+    public T Variable { get { return variable; } set { variable = value; RaiseEvent(); } }
     List<VariableEventListener<T>> listeners = new List<VariableEventListener<T>>();
 
-    public abstract void Initialize();
+    public void Initialize()
+    {
+        variable = defaultVariable;
+    }
 
-    public abstract void Change(T value);
+    public void ChangeVariable(T value)
+    {
+        Variable = value;
+    }
 
     public void Subscribe(VariableEventListener<T> eventListener)
     {
@@ -24,6 +31,6 @@ public abstract class BaseVariableEvent<T> : ScriptableObject
     protected void RaiseEvent()
     {
         foreach (var listener in listeners)
-            listener.Raise();
+            listener.Raise(Variable);
     }
 }
