@@ -1,0 +1,20 @@
+{
+  "name": "com.kuryer.scriptable_objects_extended",
+  "version": "0.1.0",
+  "displayName": "Scriptable Objects Extended",
+  "description": "A set of tools that use Scriptable Objects for storing data and performing simple actions to facilitate implementation.",
+  "unity": "2022.3",
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "author": {
+    "name": "Kuryer",
+    "email": "kuryergdev@gmail.com",
+    "url": "https://kuryer.itch.io/"
+  }
+}
